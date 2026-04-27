@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Playfair+Display:wght@600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --background: 40 30% 97%;
+    --foreground: 150 30% 10%;
+
+    --card: 40 25% 95%;
+    --card-foreground: 150 30% 10%;
+
+    --popover: 40 30% 97%;
+    --popover-foreground: 150 30% 10%;
+
+    --primary: 142 50% 28%;
+    --primary-foreground: 40 30% 97%;
+
+    --secondary: 38 60% 55%;
+    --secondary-foreground: 40 30% 97%;
+
+    --muted: 40 20% 90%;
+    --muted-foreground: 150 10% 40%;
+
+    --accent: 38 80% 60%;
+    --accent-foreground: 150 30% 10%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 40 30% 97%;
+
+    --border: 40 20% 85%;
+    --input: 40 20% 85%;
+    --ring: 142 50% 28%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 142 30% 15%;
+    --sidebar-foreground: 40 30% 95%;
+    --sidebar-primary: 38 80% 60%;
+    --sidebar-primary-foreground: 150 30% 10%;
+    --sidebar-accent: 142 25% 22%;
+    --sidebar-accent-foreground: 40 30% 95%;
+    --sidebar-border: 142 20% 25%;
+    --sidebar-ring: 38 80% 60%;
+
+    --earth: 25 40% 35%;
+    --earth-foreground: 40 30% 97%;
+    --success: 142 60% 40%;
+    --warning: 38 90% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-md border border-border/50 shadow-lg;
+  }
+
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(142 50% 28%), hsl(142 40% 38%));
+  }
+
+  .gradient-gold {
+    background: linear-gradient(135deg, hsl(38 80% 60%), hsl(38 60% 50%));
+  }
+
+  .gradient-earth {
+    background: linear-gradient(135deg, hsl(25 40% 35%), hsl(25 30% 25%));
+  }
+}
